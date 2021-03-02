@@ -160,8 +160,8 @@ var _pdf_single_page_viewer_metapdf = __w_pdfjs_require__(17);
 
 var _pdf_viewer_metapdf = __w_pdfjs_require__(19);
 
-var pdfjsVersion = '2.7.390';
-var pdfjsBuild = 'cd4f3adbf';
+var pdfjsVersion = '2.7.391';
+var pdfjsBuild = '83276621d';
 
 /***/ }),
 /* 1 */
@@ -6899,7 +6899,7 @@ var BaseViewer = /*#__PURE__*/function () {
       throw new Error("Cannot initialize BaseViewer.");
     }
 
-    var viewerVersion = '2.7.390';
+    var viewerVersion = '2.7.391';
 
     if (_pdfjsLib.version !== viewerVersion) {
       throw new Error("The API version \"".concat(_pdfjsLib.version, "\" does not match the Viewer version \"").concat(viewerVersion, "\"."));

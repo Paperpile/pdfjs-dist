@@ -50,8 +50,8 @@ Object.defineProperty(exports, "WorkerMessageHandler", ({
 
 var _worker = __w_pdfjs_require__(1);
 
-var pdfjsVersion = '2.7.390';
-var pdfjsBuild = 'cd4f3adbf';
+var pdfjsVersion = '2.7.391';
+var pdfjsBuild = '83276621d';
 
 /***/ }),
 /* 1 */
@@ -199,7 +199,7 @@ var WorkerMessageHandler = /*#__PURE__*/function () {
       var WorkerTasks = [];
       var verbosity = (0, _util_metapdf.getVerbosityLevel)();
       var apiVersion = docParams.apiVersion;
-      var workerVersion = '2.7.390';
+      var workerVersion = '2.7.391';
 
       if (apiVersion !== workerVersion) {
         throw new Error("The API version \"".concat(apiVersion, "\" does not match ") + "the Worker version \"".concat(workerVersion, "\"."));
@@ -32386,7 +32386,7 @@ var Annotation = /*#__PURE__*/function () {
       if (!array) return array;
       var decimals = 3;
 
-      if (MP && MP.options && 'decimals' in MP.options) {
+      if (typeof MP !== 'undefined' && MP && MP.options && 'decimals' in MP.options) {
         decimals = MP.options.decimals;
       }
 
@@ -32688,7 +32688,7 @@ var Annotation = /*#__PURE__*/function () {
       if (typeof global !== 'undefined' && global.MP && global.MP.isSingleFile) {
         this.data.id = 'nm' in this.data ? this.data.nm : params.ref.num;
       } else {
-        this.data.id = 'nm' in this.data ? this.data.nm : MP.sharedutils.getNewUUID(this.data, params.ref.num);
+        this.data.id = 'nm' in this.data ? this.data.nm : typeof MP !== 'undefined' ? MP.sharedutils.getNewUUID(this.data, params.ref.num) : null;
       }
 
       this.data.num = params.ref.num;

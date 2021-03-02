@@ -11,6 +11,3 @@ For usage with older browsers/environments, without support for modern features
 such as e.g. `async`/`await`, and `ReadableStream`, please see the `es5` folder.
 
 See https://github.com/mozilla/pdf.js for learning and contributing.
-
-# Note
-- This is distributable version of files built from [MetaPDF.js](https://github.com/Paperpile/metapdfjs). These files are copy of those that are generated inside of `metapdfjs/build/dist` when we build [MetaPDF.js](https://github.com/Paperpile/metapdfjs).
